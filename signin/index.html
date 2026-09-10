@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in — Winnie’s Oven</title>
+  <meta name="description" content="Sign in to keep your favorite Winnie’s Oven pairings in one place.">
+  <link rel="stylesheet" href="/theme.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <main class="flex min-h-screen items-center justify-center px-5 py-12">
+    <div class="w-full max-w-md"><a href="/" class="block text-center text-2xl font-bold" style="font-family:var(--font-heading)">Winnie’s <span style="color:var(--color-primary)">Oven.</span></a>
+      <div class="mt-8 rounded-[var(--radius)] bg-white p-8 shadow-xl">
+        <h1 class="text-3xl">Welcome back</h1>
+        <p class="mt-2" style="color:var(--color-muted)">Your saved pairings are waiting.</p>
+        <form class="mt-8 space-y-4" onsubmit="event.preventDefault();document.querySelector('#note').textContent='Demo sign-in complete — taking you to the pairing kitchen.';setTimeout(()=>location.href='/app',700)"><label class="block text-sm font-bold">Email<input type="email" required class="mt-2 w-full rounded-xl border border-[#ead8cf] bg-[#fffaf5] p-4"></label><label class="block text-sm font-bold">Password<input type="password" required class="mt-2 w-full rounded-xl border border-[#ead8cf] bg-[#fffaf5] p-4"></label><button class="w-full rounded-[var(--radius)] bg-[var(--color-primary)] py-4 font-bold text-white">Sign in</button></form>
+        <p id="note" class="mt-4 text-center text-sm" style="color:var(--color-primary)"></p>
+        <p class="mt-6 text-center text-sm" style="color:var(--color-muted)">New here? <a href="/app" class="font-bold" style="color:var(--color-primary)">Try it without an account</a></p>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
